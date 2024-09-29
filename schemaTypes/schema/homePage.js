@@ -9,8 +9,8 @@ export default {
             type: 'string',
         },
         {
-            name: 'highlightedTitles',
-            title: 'Highlighted Titles',
+            name: 'servicesHighlits',
+            title: 'Services Highlights',
             type: 'array',
             of: [{ type: 'string' }],
         },
