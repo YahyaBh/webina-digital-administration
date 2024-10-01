@@ -48,10 +48,10 @@ export default {
             of: [{ type: 'reference', to: { type: 'project' } }],
         },
         {
-            name: 'testimonials',
-            title: 'Testimonials',
+            name: 'featuredPosts',
+            title: 'Featured Posts',
             type: 'array',
-            of: [{ type: 'reference', to: { type: 'feedback' } }],
+            of: [{ type: 'reference', to: { type: 'post' } }],
         },
     ],
 };

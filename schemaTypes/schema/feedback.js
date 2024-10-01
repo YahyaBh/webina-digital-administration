@@ -1,6 +1,6 @@
 export default {
-    name: 'feedback',
-    title: 'Feedback',
+    name: 'project',
+    title: 'Project',
     type: 'document',
     fields: [
         {
@@ -9,27 +9,46 @@ export default {
             type: 'string',
         },
         {
-            name: 'feedback',
-            title: 'Feedback',
+            name: 'message',
+            title: 'Message',
             type: 'text',
         },
         {
-            name: 'rating'
-            , title: 'Rating'
-            , type: 'number'
-            , options: {
-                min: 1,
-                max: 5,
-                step: 0.5
-            }
+            name: 'link',
+            title: 'Link',
+            type: 'url',
+        },
+        {
+            name: 'tag',
+            title: 'Tag',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags',
+            },
+        },
+        {
+            name: 'email',
+            title: 'Email',
+            type: 'email',
         },
         {
             name: 'date',
             title: 'Date',
             type: 'date',
             options: {
-                dateFormat: 'YYYY-MM-DD'
-            }
+                dateFormat: 'YYYY-MM-DD',
+                calendarTodayLabel: 'Today',
+            },
+        },
+        {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'title',
+                maxLength: 96,
+            },
         },
         {
             name: 'image',
@@ -38,6 +57,16 @@ export default {
             options: {
                 hotspot: true,
             },
+        },
+        {
+            name: 'rating'
+            , title: 'Rating'
+            , type: 'number'
+            , options: {
+                min: 1
+                , max: 5
+                , step: 1
+            }
         },
     ],
 };
